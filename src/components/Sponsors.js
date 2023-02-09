@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import frame7 from "../assets/frame7.png"
-import ext from "../assets/ext.png"
-import insta from "../assets/insta.png"
-import twitter from "../assets/twitter.png"
+import external from "../assets/external.svg"
+import Vector1 from "../assets/Vector-1.svg"
+import Vector from "../assets/Vector.svg"
 import Navbar from './Navbar'
 import logosp from "../assets/logosponsor.png"
 import "./Sponsors.css"
@@ -24,13 +24,13 @@ function Sponsors() {
                         <p>Sponsor Name</p>
                         <div id='socials' className={hover ? ` sponsorsMain__sponsors__card__socials flex gap-3 delay-150` : `sponsorsMain__sponsors__card__socials hidden`}>
                             <div>
-                                <img className='w-5' src={insta} alt="" />
+                                <img className='w-5' src={Vector1} alt="" />
                             </div>
                             <div >
-                                <img className='w-5' src={ext} alt="" />
+                                <img className='w-5' src={external} alt="" />
                             </div>
                             <div >
-                                <img className='w-5' src={twitter} alt="" />
+                                <img className='w-5' src={Vector} alt="" />
                             </div>
                         </div>
                     </div >
