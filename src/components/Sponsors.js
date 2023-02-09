@@ -19,10 +19,10 @@ function Sponsors() {
             <div className="sponsorsMain__sponsors m-6 lg:m-12 flex flex-col gap-6">
                 <p className='text-xl lg:text-4xl md:ml-32'>Title Sponsor</p>
                 <div className="sponsorsBox flex">
-                    <div onMouseOver={() => setHover(!hover)} className="sponsorsMain__sponsors__card flex flex-col gap-6 p-6 mx-16 m-6 hover:bg-[#FFEEB6] w-fit rounded-lg">
-                        <img className='w-64' src={logosp} alt="" />
+                    <div className="sponsorsMain__sponsors__card flex flex-col gap-6 p-6 mx-16 m-6 hover:bg-[#FFEEB6] transition-all ease-in-out w-fit rounded-lg">
+                        <img onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='w-64' src={logosp} alt="" />
                         <p>Sponsor Name</p>
-                        <div id='socials' className={hover ? ` sponsorsMain__sponsors__card__socials flex gap-3` : `sponsorsMain__sponsors__card__socials hidden`}>
+                        <div id='socials' className={hover ? ` sponsorsMain__sponsors__card__socials flex gap-3 delay-150` : `sponsorsMain__sponsors__card__socials hidden`}>
                             <div>
                                 <img className='w-5' src={insta} alt="" />
                             </div>
