@@ -8,18 +8,18 @@ import logosp from "../assets/logosponsor.png"
 import "./Sponsors.css"
 import axios from "../axios"
 function Sponsors() {
-    const [hover, setHover] = useState(false);
+    // const [hover, setHover] = useState(false);
     const [data, setData] = useState([]);
-    console.log(hover)
+    // console.log(hover)
 
     useEffect(() => {
         async function fetchSponsors() {
             const req = await axios.get("/sponsors")
-            setData(req.data);
-            console.log(data)
+            setData(req.data.sponsors);
         }
         fetchSponsors();
     }, [])
+    console.log(data)
     return (
         <div className='sponsorsMain'>
             <Navbar />
@@ -27,24 +27,27 @@ function Sponsors() {
                 <img className='w-11/12 md:w-4/5' src={frame7} alt="frame" />
             </div>
 
-            <div className="sponsorsMain__sponsors m-6 lg:m-12 flex flex-col gap-6">
+            <div className="sponsorsMain__sponsors m-6 lg:m-12 flex flex-col">
                 <p className='text-xl lg:text-4xl md:ml-32'>Title Sponsor</p>
-                <div className="sponsorsBox flex flex-row flex-wrap m-auto">
-                    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className="sponsorsMain__sponsors__card flex flex-col gap-6 p-6  hover:bg-[#FFEEB6] transition-all ease-in-out w-fit rounded-lg">
-                        <img className='w-64' src={logosp} alt="" />
-                        <p>Sponsor Name</p>
-                        <div id='socials' className={hover ? ` sponsorsMain__sponsors__card__socials flex gap-3 delay-150` : `sponsorsMain__sponsors__card__socials hidden`}>
-                            <div>
-                                <img className='w-5' src={Vector1} alt="" />
+                <div className="sponsorsBox grid grid-cols-1 md:grid-cols-3 m-auto gap-16 mt-12">
+                    {data.map((item) => (
+                        <div className="sponsorsMain__sponsors__card flex flex-col gap-6 p-6 h-[400px] hover:bg-[#FFEEB6] transition-all ease-in-out w-fit rounded-lg">
+                            <img className='w-64' src={logosp} alt="" />
+                            <p>{item.title}</p>
+                            <div id='socials' className="sponsorsMain__sponsors__card__socials hidden gap-3 delay-100">
+                                <div>
+                                    <img className='w-5' src={Vector1} alt="" />
+                                </div>
+                                <div >
+                                    <img className='w-5' src={external} alt="" />
+                                </div>
+                                <div >
+                                    <img className='w-5' src={Vector} alt="" />
+                                </div>
                             </div>
-                            <div >
-                                <img className='w-5' src={external} alt="" />
-                            </div>
-                            <div >
-                                <img className='w-5' src={Vector} alt="" />
-                            </div>
-                        </div>
-                    </div >
+                        </div >
+                    ))}
+
                 </div>
 
             </div >

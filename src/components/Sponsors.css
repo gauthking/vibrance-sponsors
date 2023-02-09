@@ -7,3 +7,7 @@
 .sponsorsMain__sponsors__card > p {
   font-family: "Fredoka", sans-serif;
 }
+
+.sponsorsMain__sponsors__card:hover .sponsorsMain__sponsors__card__socials {
+  display: flex;
+}
