@@ -1,0 +1,14 @@
+:root {
+  --Blue: #262a43;
+}
+
+.logo {
+  font-family: "Naughty Monster", sans-serif;
+  color: white;
+}
+
+.navbar {
+  background: var(--Blue);
+  border-radius: 12px;
+  box-shadow: 8px 9px 0px #000000;
+}

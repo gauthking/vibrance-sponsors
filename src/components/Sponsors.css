@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Space+Mono&display=swap");
+
+.sponsorsMain__sponsors > p {
+  font-family: "Fredoka", sans-serif;
+}
+
+.sponsorsMain__sponsors__card > p {
+  font-family: "Fredoka", sans-serif;
+}
