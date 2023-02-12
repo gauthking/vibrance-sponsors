@@ -8,7 +8,7 @@ import logosp from "../assets/logosponsor.png"
 import "./Sponsors.css"
 import axios from "../axios"
 import { motion } from "framer-motion"
-import InfiniteScroll from "react-infinite-scroll-component";
+// import InfiniteScroll from "react-infinite-scroll-component";
 
 function Sponsors() {
     // const [hover, setHover] = useState(false);
